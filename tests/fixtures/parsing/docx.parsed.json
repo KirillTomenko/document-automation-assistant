@@ -1,0 +1,410 @@
+{
+  "filename": "sample.docx",
+  "document": {
+    "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+    "filename": "sample.docx",
+    "format": "docx",
+    "sha256": "5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e"
+  },
+  "status": "completed",
+  "fragments": [
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/body/paragraph/1",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "  Синтетический заказчик\tбез нормализации  ",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": null,
+        "row": null,
+        "column": null
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/1/column/1/paragraph/1",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "Код",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": 1,
+        "row": 1,
+        "column": 1
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/1/column/2/paragraph/1",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "Описание",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": 1,
+        "row": 1,
+        "column": 2
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/2/column/1/paragraph/1",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "W-01",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": 1,
+        "row": 2,
+        "column": 1
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/2/column/2/paragraph/1",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "Первая строка\nВторая строка",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": 1,
+        "row": 2,
+        "column": 2
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/2/row/1/column/1/paragraph/1",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "Вложенная таблица",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": 2,
+        "row": 1,
+        "column": 1
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/2/column/2/paragraph/3",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "После вложенной",
+      "location": {
+        "format": "docx",
+        "paragraph": 3,
+        "section": null,
+        "table": 1,
+        "row": 2,
+        "column": 2
+      }
+    },
+    {
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/body/paragraph/2",
+      "document_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e",
+      "text": "Конец документа",
+      "location": {
+        "format": "docx",
+        "paragraph": 2,
+        "section": null,
+        "table": null,
+        "row": null,
+        "column": null
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "location": {
+        "format": "docx",
+        "paragraph": 1,
+        "section": null,
+        "table": null,
+        "row": null,
+        "column": null
+      },
+      "text": "  Синтетический заказчик\tбез нормализации  ",
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/body/paragraph/1",
+      "table": null
+    },
+    {
+      "kind": "table",
+      "location": {
+        "format": "docx",
+        "paragraph": null,
+        "section": null,
+        "table": 1,
+        "row": null,
+        "column": null
+      },
+      "text": "",
+      "fragment_id": null,
+      "table": {
+        "table_id": "docx/table/1",
+        "rows": [
+          {
+            "index": 1,
+            "cells": [
+              {
+                "location": {
+                  "format": "docx",
+                  "paragraph": null,
+                  "section": null,
+                  "table": 1,
+                  "row": 1,
+                  "column": 1
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": null,
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": [
+                  {
+                    "kind": "paragraph",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": 1,
+                      "section": null,
+                      "table": 1,
+                      "row": 1,
+                      "column": 1
+                    },
+                    "text": "Код",
+                    "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/1/column/1/paragraph/1",
+                    "table": null
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "format": "docx",
+                  "paragraph": null,
+                  "section": null,
+                  "table": 1,
+                  "row": 1,
+                  "column": 2
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": null,
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": [
+                  {
+                    "kind": "paragraph",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": 1,
+                      "section": null,
+                      "table": 1,
+                      "row": 1,
+                      "column": 2
+                    },
+                    "text": "Описание",
+                    "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/1/column/2/paragraph/1",
+                    "table": null
+                  }
+                ]
+              }
+            ],
+            "hidden": false
+          },
+          {
+            "index": 2,
+            "cells": [
+              {
+                "location": {
+                  "format": "docx",
+                  "paragraph": null,
+                  "section": null,
+                  "table": 1,
+                  "row": 2,
+                  "column": 1
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": null,
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": [
+                  {
+                    "kind": "paragraph",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": 1,
+                      "section": null,
+                      "table": 1,
+                      "row": 2,
+                      "column": 1
+                    },
+                    "text": "W-01",
+                    "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/2/column/1/paragraph/1",
+                    "table": null
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "format": "docx",
+                  "paragraph": null,
+                  "section": null,
+                  "table": 1,
+                  "row": 2,
+                  "column": 2
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": null,
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": [
+                  {
+                    "kind": "paragraph",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": 1,
+                      "section": null,
+                      "table": 1,
+                      "row": 2,
+                      "column": 2
+                    },
+                    "text": "Первая строка\nВторая строка",
+                    "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/2/column/2/paragraph/1",
+                    "table": null
+                  },
+                  {
+                    "kind": "table",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": null,
+                      "section": null,
+                      "table": 2,
+                      "row": null,
+                      "column": null
+                    },
+                    "text": "",
+                    "fragment_id": null,
+                    "table": {
+                      "table_id": "docx/table/2",
+                      "rows": [
+                        {
+                          "index": 1,
+                          "cells": [
+                            {
+                              "location": {
+                                "format": "docx",
+                                "paragraph": null,
+                                "section": null,
+                                "table": 2,
+                                "row": 1,
+                                "column": 1
+                              },
+                              "value": {
+                                "kind": "empty",
+                                "value": null
+                              },
+                              "number_format": null,
+                              "stored_value": null,
+                              "storage_type": null,
+                              "fragment_id": null,
+                              "usable": true,
+                              "merged_range": null,
+                              "blocks": [
+                                {
+                                  "kind": "paragraph",
+                                  "location": {
+                                    "format": "docx",
+                                    "paragraph": 1,
+                                    "section": null,
+                                    "table": 2,
+                                    "row": 1,
+                                    "column": 1
+                                  },
+                                  "text": "Вложенная таблица",
+                                  "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/2/row/1/column/1/paragraph/1",
+                                  "table": null
+                                }
+                              ]
+                            }
+                          ],
+                          "hidden": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "kind": "paragraph",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": 2,
+                      "section": null,
+                      "table": 1,
+                      "row": 2,
+                      "column": 2
+                    },
+                    "text": "",
+                    "fragment_id": null,
+                    "table": null
+                  },
+                  {
+                    "kind": "paragraph",
+                    "location": {
+                      "format": "docx",
+                      "paragraph": 3,
+                      "section": null,
+                      "table": 1,
+                      "row": 2,
+                      "column": 2
+                    },
+                    "text": "После вложенной",
+                    "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/table/1/row/2/column/2/paragraph/3",
+                    "table": null
+                  }
+                ]
+              }
+            ],
+            "hidden": false
+          }
+        ]
+      }
+    },
+    {
+      "kind": "paragraph",
+      "location": {
+        "format": "docx",
+        "paragraph": 2,
+        "section": null,
+        "table": null,
+        "row": null,
+        "column": null
+      },
+      "text": "Конец документа",
+      "fragment_id": "sha256:5fa98f226fc4718f5ab758ad18a88749afc725a0ec051724d609ab54ce24679e:docx/body/paragraph/2",
+      "table": null
+    }
+  ],
+  "sheets": [],
+  "diagnostics": []
+}

@@ -1,0 +1,1369 @@
+{
+  "note": "Synthetic expected data only; no files parsed, LLM called or DOCX generated. Hashes are synthetic placeholders.",
+  "scenarios": {
+    "A": {
+      "result": {
+        "run_id": "A",
+        "processing_status": "completed",
+        "documents": [
+          {
+            "document_id": "pdf",
+            "filename": "customer.pdf",
+            "format": "pdf",
+            "sha256": "ed3b85c3efbec2a780c2186a664c69b8e205fd60ae6ee81751e5a75869a654cb"
+          },
+          {
+            "document_id": "docx",
+            "filename": "description.docx",
+            "format": "docx",
+            "sha256": "b528a683cd310cc05890b2913664a03fdc45446c1bb660152f45592ec852a0a2"
+          },
+          {
+            "document_id": "xlsx",
+            "filename": "items.xlsx",
+            "format": "xlsx",
+            "sha256": "ac6e9ae0bc7517e4d6e851297ce12601c3688038fa3e3ccc2745b3eac2154cbd"
+          }
+        ],
+        "classifications": [
+          {
+            "document_id": "pdf",
+            "document_type": "customer_card",
+            "evidence": [
+              {
+                "fragment_id": "pdf:9",
+                "document_id": "pdf",
+                "text": "Карточка заказчика",
+                "location": {
+                  "format": "pdf",
+                  "page": 1
+                }
+              }
+            ]
+          },
+          {
+            "document_id": "docx",
+            "document_type": "work_description",
+            "evidence": [
+              {
+                "fragment_id": "docx:1",
+                "document_id": "docx",
+                "text": "Описание работ",
+                "location": {
+                  "format": "docx",
+                  "paragraph": 1
+                }
+              }
+            ]
+          },
+          {
+            "document_id": "xlsx",
+            "document_type": "work_items",
+            "evidence": [
+              {
+                "fragment_id": "xlsx:Работы!A1",
+                "document_id": "xlsx",
+                "text": "Код позиции",
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Работы",
+                  "cell": "A1"
+                }
+              }
+            ]
+          }
+        ],
+        "data": {
+          "customer_name": {
+            "state": "found",
+            "value": "ООО «Демо Офис»",
+            "candidates": [
+              {
+                "raw_value": "ООО «Демо Офис»",
+                "interpretations": [
+                  "ООО «Демо Офис»"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "pdf:1",
+                  "document_id": "pdf",
+                  "text": "ООО «Демо Офис»",
+                  "location": {
+                    "format": "pdf",
+                    "page": 1
+                  }
+                }
+              },
+              {
+                "raw_value": "ООО «Демо Офис»",
+                "interpretations": [
+                  "ООО «Демо Офис»"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:3",
+                  "document_id": "docx",
+                  "text": "ООО «Демо Офис»",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 3
+                  }
+                }
+              }
+            ]
+          },
+          "request_title": {
+            "state": "found",
+            "value": "Подготовка офисной комнаты",
+            "candidates": [
+              {
+                "raw_value": "Подготовка офисной комнаты",
+                "interpretations": [
+                  "Подготовка офисной комнаты"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:2",
+                  "document_id": "docx",
+                  "text": "Подготовка офисной комнаты",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 2
+                  }
+                }
+              }
+            ]
+          },
+          "work_description": {
+            "state": "found",
+            "value": "Собрать два офисных стола и установить четыре настенные полки.",
+            "candidates": [
+              {
+                "raw_value": "Собрать два офисных стола и установить четыре настенные полки.",
+                "interpretations": [
+                  "Собрать два офисных стола и установить четыре настенные полки."
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:7",
+                  "document_id": "docx",
+                  "text": "Собрать два офисных стола и установить четыре настенные полки.",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 7
+                  }
+                }
+              }
+            ]
+          },
+          "requested_completion_date": {
+            "state": "found",
+            "value": "2026-11-20",
+            "candidates": [
+              {
+                "raw_value": "20.11.2026",
+                "interpretations": [
+                  "2026-11-20"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:4",
+                  "document_id": "docx",
+                  "text": "20.11.2026",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 4
+                  }
+                }
+              },
+              {
+                "raw_value": "2026-11-20",
+                "interpretations": [
+                  "2026-11-20"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "xlsx:Заявка!B2",
+                  "document_id": "xlsx",
+                  "text": "2026-11-20",
+                  "location": {
+                    "format": "xlsx",
+                    "sheet": "Заявка",
+                    "cell": "B2"
+                  }
+                }
+              }
+            ]
+          },
+          "contact_email": {
+            "state": "found",
+            "value": "office@example.com",
+            "candidates": [
+              {
+                "raw_value": "office@example.com",
+                "interpretations": [
+                  "office@example.com"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "pdf:2",
+                  "document_id": "pdf",
+                  "text": "office@example.com",
+                  "location": {
+                    "format": "pdf",
+                    "page": 1
+                  }
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "item_code": {
+                "state": "found",
+                "value": "W-01",
+                "candidates": [
+                  {
+                    "raw_value": "W-01",
+                    "interpretations": [
+                      "W-01"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!A2",
+                      "document_id": "xlsx",
+                      "text": "W-01",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "A2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "name": {
+                "state": "found",
+                "value": "Сборка офисного стола",
+                "candidates": [
+                  {
+                    "raw_value": "Сборка офисного стола",
+                    "interpretations": [
+                      "Сборка офисного стола"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!B2",
+                      "document_id": "xlsx",
+                      "text": "Сборка офисного стола",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "B2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "quantity": {
+                "state": "found",
+                "value": "2",
+                "candidates": [
+                  {
+                    "raw_value": "2",
+                    "interpretations": [
+                      "2"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!C2",
+                      "document_id": "xlsx",
+                      "text": "2",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "C2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "state": "found",
+                "value": "шт",
+                "candidates": [
+                  {
+                    "raw_value": "шт.",
+                    "interpretations": [
+                      "шт"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!D2",
+                      "document_id": "xlsx",
+                      "text": "шт.",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "D2"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item_code": {
+                "state": "found",
+                "value": "W-02",
+                "candidates": [
+                  {
+                    "raw_value": "W-02",
+                    "interpretations": [
+                      "W-02"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!A3",
+                      "document_id": "xlsx",
+                      "text": "W-02",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "A3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "name": {
+                "state": "found",
+                "value": "Установка настенной полки",
+                "candidates": [
+                  {
+                    "raw_value": "Установка настенной полки",
+                    "interpretations": [
+                      "Установка настенной полки"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!B3",
+                      "document_id": "xlsx",
+                      "text": "Установка настенной полки",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "B3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "quantity": {
+                "state": "found",
+                "value": "4",
+                "candidates": [
+                  {
+                    "raw_value": "4",
+                    "interpretations": [
+                      "4"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!C3",
+                      "document_id": "xlsx",
+                      "text": "4",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "C3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "state": "found",
+                "value": "шт",
+                "candidates": [
+                  {
+                    "raw_value": "шт",
+                    "interpretations": [
+                      "шт"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!D3",
+                      "document_id": "xlsx",
+                      "text": "шт",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "D3"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "issues": [],
+        "needs_review": false,
+        "audit": [
+          {
+            "run_id": "A",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "stage": "validation",
+            "event": "completed",
+            "message": "Synthetic expected event"
+          }
+        ]
+      },
+      "expected_docx": {
+        "can_generate": true,
+        "date_text": "20.11.2026",
+        "draft": false
+      }
+    },
+    "B": {
+      "result": {
+        "run_id": "B",
+        "processing_status": "completed",
+        "documents": [
+          {
+            "document_id": "pdf",
+            "filename": "customer.pdf",
+            "format": "pdf",
+            "sha256": "ed3b85c3efbec2a780c2186a664c69b8e205fd60ae6ee81751e5a75869a654cb"
+          },
+          {
+            "document_id": "docx",
+            "filename": "description.docx",
+            "format": "docx",
+            "sha256": "b528a683cd310cc05890b2913664a03fdc45446c1bb660152f45592ec852a0a2"
+          },
+          {
+            "document_id": "xlsx",
+            "filename": "items.xlsx",
+            "format": "xlsx",
+            "sha256": "ac6e9ae0bc7517e4d6e851297ce12601c3688038fa3e3ccc2745b3eac2154cbd"
+          }
+        ],
+        "classifications": [
+          {
+            "document_id": "pdf",
+            "document_type": "customer_card",
+            "evidence": [
+              {
+                "fragment_id": "pdf:9",
+                "document_id": "pdf",
+                "text": "Карточка заказчика",
+                "location": {
+                  "format": "pdf",
+                  "page": 1
+                }
+              }
+            ]
+          },
+          {
+            "document_id": "docx",
+            "document_type": "work_description",
+            "evidence": [
+              {
+                "fragment_id": "docx:1",
+                "document_id": "docx",
+                "text": "Описание работ",
+                "location": {
+                  "format": "docx",
+                  "paragraph": 1
+                }
+              }
+            ]
+          },
+          {
+            "document_id": "xlsx",
+            "document_type": "work_items",
+            "evidence": [
+              {
+                "fragment_id": "xlsx:Работы!A1",
+                "document_id": "xlsx",
+                "text": "Код позиции",
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Работы",
+                  "cell": "A1"
+                }
+              }
+            ]
+          }
+        ],
+        "data": {
+          "customer_name": {
+            "state": "found",
+            "value": "ООО «Демо Офис»",
+            "candidates": [
+              {
+                "raw_value": "ООО «Демо Офис»",
+                "interpretations": [
+                  "ООО «Демо Офис»"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "pdf:1",
+                  "document_id": "pdf",
+                  "text": "ООО «Демо Офис»",
+                  "location": {
+                    "format": "pdf",
+                    "page": 1
+                  }
+                }
+              },
+              {
+                "raw_value": "ООО «Демо Офис»",
+                "interpretations": [
+                  "ООО «Демо Офис»"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:3",
+                  "document_id": "docx",
+                  "text": "ООО «Демо Офис»",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 3
+                  }
+                }
+              }
+            ]
+          },
+          "request_title": {
+            "state": "found",
+            "value": "Подготовка офисной комнаты",
+            "candidates": [
+              {
+                "raw_value": "Подготовка офисной комнаты",
+                "interpretations": [
+                  "Подготовка офисной комнаты"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:2",
+                  "document_id": "docx",
+                  "text": "Подготовка офисной комнаты",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 2
+                  }
+                }
+              }
+            ]
+          },
+          "work_description": {
+            "state": "found",
+            "value": "Собрать два офисных стола и установить четыре настенные полки.",
+            "candidates": [
+              {
+                "raw_value": "Собрать два офисных стола и установить четыре настенные полки.",
+                "interpretations": [
+                  "Собрать два офисных стола и установить четыре настенные полки."
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:7",
+                  "document_id": "docx",
+                  "text": "Собрать два офисных стола и установить четыре настенные полки.",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 7
+                  }
+                }
+              }
+            ]
+          },
+          "requested_completion_date": {
+            "state": "missing",
+            "value": null,
+            "candidates": []
+          },
+          "contact_email": {
+            "state": "found",
+            "value": "office@example.com",
+            "candidates": [
+              {
+                "raw_value": "office@example.com",
+                "interpretations": [
+                  "office@example.com"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "pdf:2",
+                  "document_id": "pdf",
+                  "text": "office@example.com",
+                  "location": {
+                    "format": "pdf",
+                    "page": 1
+                  }
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "item_code": {
+                "state": "found",
+                "value": "W-01",
+                "candidates": [
+                  {
+                    "raw_value": "W-01",
+                    "interpretations": [
+                      "W-01"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!A2",
+                      "document_id": "xlsx",
+                      "text": "W-01",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "A2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "name": {
+                "state": "found",
+                "value": "Сборка офисного стола",
+                "candidates": [
+                  {
+                    "raw_value": "Сборка офисного стола",
+                    "interpretations": [
+                      "Сборка офисного стола"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!B2",
+                      "document_id": "xlsx",
+                      "text": "Сборка офисного стола",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "B2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "quantity": {
+                "state": "found",
+                "value": "2",
+                "candidates": [
+                  {
+                    "raw_value": "2",
+                    "interpretations": [
+                      "2"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!C2",
+                      "document_id": "xlsx",
+                      "text": "2",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "C2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "state": "found",
+                "value": "шт",
+                "candidates": [
+                  {
+                    "raw_value": "шт.",
+                    "interpretations": [
+                      "шт"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!D2",
+                      "document_id": "xlsx",
+                      "text": "шт.",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "D2"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item_code": {
+                "state": "found",
+                "value": "W-02",
+                "candidates": [
+                  {
+                    "raw_value": "W-02",
+                    "interpretations": [
+                      "W-02"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!A3",
+                      "document_id": "xlsx",
+                      "text": "W-02",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "A3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "name": {
+                "state": "found",
+                "value": "Установка настенной полки",
+                "candidates": [
+                  {
+                    "raw_value": "Установка настенной полки",
+                    "interpretations": [
+                      "Установка настенной полки"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!B3",
+                      "document_id": "xlsx",
+                      "text": "Установка настенной полки",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "B3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "quantity": {
+                "state": "found",
+                "value": "4",
+                "candidates": [
+                  {
+                    "raw_value": "4",
+                    "interpretations": [
+                      "4"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!C3",
+                      "document_id": "xlsx",
+                      "text": "4",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "C3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "state": "found",
+                "value": "шт",
+                "candidates": [
+                  {
+                    "raw_value": "шт",
+                    "interpretations": [
+                      "шт"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!D3",
+                      "document_id": "xlsx",
+                      "text": "шт",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "D3"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "issues": [
+          {
+            "code": "required_missing",
+            "path": "requested_completion_date",
+            "message": "Желаемая дата завершения отсутствует."
+          }
+        ],
+        "needs_review": true,
+        "audit": [
+          {
+            "run_id": "B",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "stage": "validation",
+            "event": "completed",
+            "message": "Synthetic expected event"
+          }
+        ]
+      },
+      "expected_docx": {
+        "can_generate": true,
+        "date_text": "[НЕ УКАЗАНО]",
+        "draft": true
+      }
+    },
+    "C": {
+      "result": {
+        "run_id": "C",
+        "processing_status": "completed",
+        "documents": [
+          {
+            "document_id": "pdf",
+            "filename": "customer.pdf",
+            "format": "pdf",
+            "sha256": "ed3b85c3efbec2a780c2186a664c69b8e205fd60ae6ee81751e5a75869a654cb"
+          },
+          {
+            "document_id": "docx",
+            "filename": "description.docx",
+            "format": "docx",
+            "sha256": "b528a683cd310cc05890b2913664a03fdc45446c1bb660152f45592ec852a0a2"
+          },
+          {
+            "document_id": "xlsx",
+            "filename": "items.xlsx",
+            "format": "xlsx",
+            "sha256": "ac6e9ae0bc7517e4d6e851297ce12601c3688038fa3e3ccc2745b3eac2154cbd"
+          }
+        ],
+        "classifications": [
+          {
+            "document_id": "pdf",
+            "document_type": "customer_card",
+            "evidence": [
+              {
+                "fragment_id": "pdf:9",
+                "document_id": "pdf",
+                "text": "Карточка заказчика",
+                "location": {
+                  "format": "pdf",
+                  "page": 1
+                }
+              }
+            ]
+          },
+          {
+            "document_id": "docx",
+            "document_type": "work_description",
+            "evidence": [
+              {
+                "fragment_id": "docx:1",
+                "document_id": "docx",
+                "text": "Описание работ",
+                "location": {
+                  "format": "docx",
+                  "paragraph": 1
+                }
+              }
+            ]
+          },
+          {
+            "document_id": "xlsx",
+            "document_type": "work_items",
+            "evidence": [
+              {
+                "fragment_id": "xlsx:Работы!A1",
+                "document_id": "xlsx",
+                "text": "Код позиции",
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Работы",
+                  "cell": "A1"
+                }
+              }
+            ]
+          }
+        ],
+        "data": {
+          "customer_name": {
+            "state": "found",
+            "value": "ООО «Демо Офис»",
+            "candidates": [
+              {
+                "raw_value": "ООО «Демо Офис»",
+                "interpretations": [
+                  "ООО «Демо Офис»"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "pdf:1",
+                  "document_id": "pdf",
+                  "text": "ООО «Демо Офис»",
+                  "location": {
+                    "format": "pdf",
+                    "page": 1
+                  }
+                }
+              },
+              {
+                "raw_value": "ООО «Демо Офис»",
+                "interpretations": [
+                  "ООО «Демо Офис»"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:3",
+                  "document_id": "docx",
+                  "text": "ООО «Демо Офис»",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 3
+                  }
+                }
+              }
+            ]
+          },
+          "request_title": {
+            "state": "found",
+            "value": "Подготовка офисной комнаты",
+            "candidates": [
+              {
+                "raw_value": "Подготовка офисной комнаты",
+                "interpretations": [
+                  "Подготовка офисной комнаты"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:2",
+                  "document_id": "docx",
+                  "text": "Подготовка офисной комнаты",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 2
+                  }
+                }
+              }
+            ]
+          },
+          "work_description": {
+            "state": "found",
+            "value": "Собрать два офисных стола и установить четыре настенные полки.",
+            "candidates": [
+              {
+                "raw_value": "Собрать два офисных стола и установить четыре настенные полки.",
+                "interpretations": [
+                  "Собрать два офисных стола и установить четыре настенные полки."
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:7",
+                  "document_id": "docx",
+                  "text": "Собрать два офисных стола и установить четыре настенные полки.",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 7
+                  }
+                }
+              }
+            ]
+          },
+          "requested_completion_date": {
+            "state": "conflict",
+            "value": null,
+            "candidates": [
+              {
+                "raw_value": "20.11.2026",
+                "interpretations": [
+                  "2026-11-20"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "docx:4",
+                  "document_id": "docx",
+                  "text": "20.11.2026",
+                  "location": {
+                    "format": "docx",
+                    "paragraph": 4
+                  }
+                }
+              },
+              {
+                "raw_value": "2026-11-22",
+                "interpretations": [
+                  "2026-11-22"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "xlsx:Заявка!B2",
+                  "document_id": "xlsx",
+                  "text": "2026-11-22",
+                  "location": {
+                    "format": "xlsx",
+                    "sheet": "Заявка",
+                    "cell": "B2"
+                  }
+                }
+              }
+            ]
+          },
+          "contact_email": {
+            "state": "found",
+            "value": "office@example.com",
+            "candidates": [
+              {
+                "raw_value": "office@example.com",
+                "interpretations": [
+                  "office@example.com"
+                ],
+                "verified": true,
+                "source": {
+                  "fragment_id": "pdf:2",
+                  "document_id": "pdf",
+                  "text": "office@example.com",
+                  "location": {
+                    "format": "pdf",
+                    "page": 1
+                  }
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "item_code": {
+                "state": "found",
+                "value": "W-01",
+                "candidates": [
+                  {
+                    "raw_value": "W-01",
+                    "interpretations": [
+                      "W-01"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!A2",
+                      "document_id": "xlsx",
+                      "text": "W-01",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "A2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "name": {
+                "state": "found",
+                "value": "Сборка офисного стола",
+                "candidates": [
+                  {
+                    "raw_value": "Сборка офисного стола",
+                    "interpretations": [
+                      "Сборка офисного стола"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!B2",
+                      "document_id": "xlsx",
+                      "text": "Сборка офисного стола",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "B2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "quantity": {
+                "state": "found",
+                "value": "2",
+                "candidates": [
+                  {
+                    "raw_value": "2",
+                    "interpretations": [
+                      "2"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!C2",
+                      "document_id": "xlsx",
+                      "text": "2",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "C2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "state": "found",
+                "value": "шт",
+                "candidates": [
+                  {
+                    "raw_value": "шт.",
+                    "interpretations": [
+                      "шт"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!D2",
+                      "document_id": "xlsx",
+                      "text": "шт.",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "D2"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item_code": {
+                "state": "found",
+                "value": "W-02",
+                "candidates": [
+                  {
+                    "raw_value": "W-02",
+                    "interpretations": [
+                      "W-02"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!A3",
+                      "document_id": "xlsx",
+                      "text": "W-02",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "A3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "name": {
+                "state": "found",
+                "value": "Установка настенной полки",
+                "candidates": [
+                  {
+                    "raw_value": "Установка настенной полки",
+                    "interpretations": [
+                      "Установка настенной полки"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!B3",
+                      "document_id": "xlsx",
+                      "text": "Установка настенной полки",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "B3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "quantity": {
+                "state": "found",
+                "value": "4",
+                "candidates": [
+                  {
+                    "raw_value": "4",
+                    "interpretations": [
+                      "4"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!C3",
+                      "document_id": "xlsx",
+                      "text": "4",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "C3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "state": "found",
+                "value": "шт",
+                "candidates": [
+                  {
+                    "raw_value": "шт",
+                    "interpretations": [
+                      "шт"
+                    ],
+                    "verified": true,
+                    "source": {
+                      "fragment_id": "xlsx:Работы!D3",
+                      "document_id": "xlsx",
+                      "text": "шт",
+                      "location": {
+                        "format": "xlsx",
+                        "sheet": "Работы",
+                        "cell": "D3"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "issues": [
+          {
+            "code": "conflicting_values",
+            "path": "requested_completion_date",
+            "message": "Даты завершения противоречат друг другу.",
+            "sources": [
+              {
+                "fragment_id": "docx:4",
+                "document_id": "docx",
+                "text": "20.11.2026",
+                "location": {
+                  "format": "docx",
+                  "paragraph": 4
+                }
+              },
+              {
+                "fragment_id": "xlsx:Заявка!B2",
+                "document_id": "xlsx",
+                "text": "2026-11-22",
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Заявка",
+                  "cell": "B2"
+                }
+              }
+            ]
+          }
+        ],
+        "needs_review": true,
+        "audit": [
+          {
+            "run_id": "C",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "stage": "validation",
+            "event": "completed",
+            "message": "Synthetic expected event"
+          }
+        ]
+      },
+      "expected_docx": {
+        "can_generate": true,
+        "date_text": "[ПРОТИВОРЕЧИЕ В ИСТОЧНИКАХ]",
+        "draft": true
+      }
+    },
+    "T1": {
+      "result": {
+        "run_id": "T1",
+        "processing_status": "failed",
+        "documents": [
+          {
+            "document_id": "pdf",
+            "filename": "customer.pdf",
+            "format": "pdf",
+            "sha256": "ed3b85c3efbec2a780c2186a664c69b8e205fd60ae6ee81751e5a75869a654cb"
+          },
+          {
+            "document_id": "docx",
+            "filename": "description.docx",
+            "format": "docx",
+            "sha256": "b528a683cd310cc05890b2913664a03fdc45446c1bb660152f45592ec852a0a2"
+          },
+          {
+            "document_id": "xlsx",
+            "filename": "items.xlsx",
+            "format": "xlsx",
+            "sha256": "ac6e9ae0bc7517e4d6e851297ce12601c3688038fa3e3ccc2745b3eac2154cbd"
+          }
+        ],
+        "classifications": [],
+        "data": null,
+        "issues": [],
+        "needs_review": false,
+        "audit": [
+          {
+            "run_id": "T1",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "stage": "extraction",
+            "event": "failed",
+            "message": "Synthetic expected event",
+            "error_code": "llm_unavailable"
+          }
+        ]
+      },
+      "expected_docx": {
+        "can_generate": false,
+        "date_text": null,
+        "draft": null
+      }
+    },
+    "T2": {
+      "result": {
+        "run_id": "T2",
+        "processing_status": "failed",
+        "documents": [
+          {
+            "document_id": "pdf",
+            "filename": "customer.pdf",
+            "format": "pdf",
+            "sha256": "ed3b85c3efbec2a780c2186a664c69b8e205fd60ae6ee81751e5a75869a654cb"
+          },
+          {
+            "document_id": "docx",
+            "filename": "description.docx",
+            "format": "docx",
+            "sha256": "b528a683cd310cc05890b2913664a03fdc45446c1bb660152f45592ec852a0a2"
+          },
+          {
+            "document_id": "xlsx",
+            "filename": "items.xlsx",
+            "format": "xlsx",
+            "sha256": "ac6e9ae0bc7517e4d6e851297ce12601c3688038fa3e3ccc2745b3eac2154cbd"
+          }
+        ],
+        "classifications": [],
+        "data": null,
+        "issues": [],
+        "needs_review": false,
+        "audit": [
+          {
+            "run_id": "T2",
+            "timestamp": "2026-10-16T12:00:00Z",
+            "stage": "parsing",
+            "event": "failed",
+            "message": "Synthetic expected event",
+            "error_code": "file_read_error"
+          }
+        ]
+      },
+      "expected_docx": {
+        "can_generate": false,
+        "date_text": null,
+        "draft": null
+      }
+    }
+  }
+}

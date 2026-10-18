@@ -1,0 +1,543 @@
+{
+  "filename": "sample.xlsx",
+  "document": {
+    "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+    "filename": "sample.xlsx",
+    "format": "xlsx",
+    "sha256": "238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859"
+  },
+  "status": "completed",
+  "fragments": [
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/A1",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "Код",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "A1"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/B1",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "Количество",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "B1"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/C1",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "Дата",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "C1"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/D1",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "Флаг",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "D1"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/A2",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "  W-01  ",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "A2"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/B2",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "2",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "B2"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/C2",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "2026-11-20T00:00:00",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "C2"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/D2",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "False",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "D2"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/B4",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "2.5",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "B4"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/C4",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "12:30:00",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "C4"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/D4",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "1 day, 1:00:00",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "D4"
+      }
+    },
+    {
+      "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/A5",
+      "document_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859",
+      "text": "00123",
+      "location": {
+        "format": "xlsx",
+        "sheet": "Данные",
+        "cell": "A5"
+      }
+    }
+  ],
+  "blocks": [],
+  "sheets": [
+    {
+      "name": "Данные",
+      "state": "visible",
+      "table": {
+        "table_id": "xlsx/Данные",
+        "rows": [
+          {
+            "index": 1,
+            "cells": [
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "A1"
+                },
+                "value": {
+                  "kind": "string",
+                  "value": "Код"
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": "inlineStr",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/A1",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "B1"
+                },
+                "value": {
+                  "kind": "string",
+                  "value": "Количество"
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": "inlineStr",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/B1",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "C1"
+                },
+                "value": {
+                  "kind": "string",
+                  "value": "Дата"
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": "inlineStr",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/C1",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "D1"
+                },
+                "value": {
+                  "kind": "string",
+                  "value": "Флаг"
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": "inlineStr",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/D1",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              }
+            ],
+            "hidden": false
+          },
+          {
+            "index": 2,
+            "cells": [
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "A2"
+                },
+                "value": {
+                  "kind": "string",
+                  "value": "  W-01  "
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": "inlineStr",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/A2",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "B2"
+                },
+                "value": {
+                  "kind": "integer",
+                  "value": 2
+                },
+                "number_format": "General",
+                "stored_value": "2",
+                "storage_type": "n",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/B2",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "C2"
+                },
+                "value": {
+                  "kind": "datetime",
+                  "value": "2026-11-20T00:00:00"
+                },
+                "number_format": "yyyy-mm-dd h:mm:ss",
+                "stored_value": "46346",
+                "storage_type": "n",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/C2",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "D2"
+                },
+                "value": {
+                  "kind": "boolean",
+                  "value": false
+                },
+                "number_format": "General",
+                "stored_value": "0",
+                "storage_type": "b",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/D2",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              }
+            ],
+            "hidden": false
+          },
+          {
+            "index": 3,
+            "cells": [
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "A3"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "B3"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "C3"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "D3"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              }
+            ],
+            "hidden": false
+          },
+          {
+            "index": 4,
+            "cells": [
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "A4"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "B4"
+                },
+                "value": {
+                  "kind": "number",
+                  "value": 2.5
+                },
+                "number_format": "General",
+                "stored_value": "2.5",
+                "storage_type": "n",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/B4",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "C4"
+                },
+                "value": {
+                  "kind": "time",
+                  "value": "12:30:00"
+                },
+                "number_format": "h:mm:ss",
+                "stored_value": "0.5208333333333334",
+                "storage_type": "n",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/C4",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "D4"
+                },
+                "value": {
+                  "kind": "duration",
+                  "value": "P1DT1H"
+                },
+                "number_format": "[hh]:mm:ss",
+                "stored_value": "1.041666666666667",
+                "storage_type": "n",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/D4",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              }
+            ],
+            "hidden": true
+          },
+          {
+            "index": 5,
+            "cells": [
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "A5"
+                },
+                "value": {
+                  "kind": "string",
+                  "value": "00123"
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": "inlineStr",
+                "fragment_id": "sha256:238ebb289b77c39613c6de75ce50d9a1dc14f6dd2ee04a7216582f8d58a39859:xlsx/Данные/A5",
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "B5"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "C5"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              },
+              {
+                "location": {
+                  "format": "xlsx",
+                  "sheet": "Данные",
+                  "cell": "D5"
+                },
+                "value": {
+                  "kind": "empty",
+                  "value": null
+                },
+                "number_format": "General",
+                "stored_value": null,
+                "storage_type": null,
+                "fragment_id": null,
+                "usable": true,
+                "merged_range": null,
+                "blocks": []
+              }
+            ],
+            "hidden": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Пустой",
+      "state": "hidden",
+      "table": {
+        "table_id": "xlsx/Пустой",
+        "rows": []
+      }
+    }
+  ],
+  "diagnostics": []
+}

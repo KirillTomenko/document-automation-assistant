@@ -1,0 +1,54 @@
+{
+  "filename": "sample.pdf",
+  "document": {
+    "document_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1",
+    "filename": "sample.pdf",
+    "format": "pdf",
+    "sha256": "194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1"
+  },
+  "status": "completed",
+  "fragments": [
+    {
+      "fragment_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1:pdf/page/1",
+      "document_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1",
+      "text": "Demo customer",
+      "location": {
+        "format": "pdf",
+        "page": 1
+      }
+    },
+    {
+      "fragment_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1:pdf/page/2",
+      "document_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1",
+      "text": "Second page",
+      "location": {
+        "format": "pdf",
+        "page": 2
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "kind": "page",
+      "location": {
+        "format": "pdf",
+        "page": 1
+      },
+      "text": "Demo customer",
+      "fragment_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1:pdf/page/1",
+      "table": null
+    },
+    {
+      "kind": "page",
+      "location": {
+        "format": "pdf",
+        "page": 2
+      },
+      "text": "Second page",
+      "fragment_id": "sha256:194db125d62aaa3db9e53dada3e27e73de6ffcf3b79cadbfbfa39b752e28a2c1:pdf/page/2",
+      "table": null
+    }
+  ],
+  "sheets": [],
+  "diagnostics": []
+}

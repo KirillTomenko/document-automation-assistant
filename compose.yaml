@@ -1,0 +1,24 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:${DAA_API_PORT:-18000}:8000"
+    volumes:
+      - workflow-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+  ui:
+    build: .
+    command: ["python", "-m", "streamlit", "run", "src/document_automation/ui.py", "--server.address", "0.0.0.0", "--browser.gatherUsageStats", "false"]
+    environment:
+      DAA_API_URL: http://api:8000
+    ports:
+      - "127.0.0.1:${DAA_UI_PORT:-18501}:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  workflow-data:
