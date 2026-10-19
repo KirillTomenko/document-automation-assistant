@@ -16,7 +16,7 @@
 
 ## Демонстрация
 
-[![Смотреть видео: готовая заявка из PDF, DOCX и XLSX](docs/video/document-automation-assistant-cover.jpg)](docs/video/document-automation-assistant-demo.mp4)
+[![Смотреть демонстрацию · 82 секунды](docs/video/document-automation-assistant-cover-play.png)](docs/video/document-automation-assistant-demo.mp4)
 
 Видео, 81 секунда: из **PDF, DOCX и XLSX** формируются рабочая заявка и отдельный
 отчёт проверки. Значения связаны с источниками и координатами; пропуски и неоднозначности отмечаются
