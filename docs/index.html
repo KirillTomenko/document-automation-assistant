@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Демонстрация — Document Automation Assistant</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #172b4d;
+      background: #f3f6fa;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    main {
+      width: min(100% - 32px, 1040px);
+      margin: 0 auto;
+      padding: clamp(24px, 6vw, 64px) 0;
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(1.8rem, 5vw, 2.7rem); line-height: 1.15; }
+    .intro { margin: 0 0 24px; color: #41536d; font-size: clamp(1rem, 2.4vw, 1.15rem); }
+    .player {
+      overflow: hidden;
+      border: 1px solid #d5deea;
+      border-radius: 14px;
+      background: #0b1728;
+      box-shadow: 0 12px 34px rgb(23 43 77 / 12%);
+    }
+    video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #0b1728; }
+    .notice {
+      margin: 20px 0;
+      padding: 14px 16px;
+      border-left: 4px solid #23805c;
+      border-radius: 6px;
+      background: #e9f5ef;
+      color: #174b38;
+      line-height: 1.5;
+    }
+    a { color: #075eb5; text-underline-offset: 3px; }
+    .back { display: inline-block; padding: 8px 0; font-weight: 650; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Document Automation Assistant</h1>
+    <p class="intro">Из PDF, Word и Excel — в рабочую заявку и отдельный отчёт проверки с источниками данных.</p>
+    <div class="player">
+      <video controls playsinline preload="metadata" poster="video/document-automation-assistant-cover-play.png">
+        <source src="video/document-automation-assistant-demo.mp4" type="video/mp4">
+        Ваш браузер не поддерживает HTML5-видео. <a href="video/document-automation-assistant-demo.mp4">Откройте MP4</a>.
+      </video>
+    </div>
+    <p class="notice"><strong>Offline demo.</strong> В ролике используются только синтетические документы; LLM-вызовов нет.</p>
+    <a class="back" href="https://github.com/KirillTomenko/document-automation-assistant">← Проект на GitHub</a>
+  </main>
+</body>
+</html>

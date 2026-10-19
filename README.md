@@ -16,7 +16,7 @@
 
 ## Демонстрация
 
-[![Смотреть демонстрацию · 82 секунды](docs/video/document-automation-assistant-cover-play.png)](docs/video/document-automation-assistant-demo.mp4)
+[![Смотреть демонстрацию · 82 секунды](docs/video/document-automation-assistant-cover-play.png)](https://kirilltomenko.github.io/document-automation-assistant/)
 
 Видео, 81 секунда: из **PDF, DOCX и XLSX** формируются рабочая заявка и отдельный
 отчёт проверки. Значения связаны с источниками и координатами; пропуски и неоднозначности отмечаются
