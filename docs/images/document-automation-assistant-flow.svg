@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1460" viewBox="0 0 1000 1460" role="img" aria-labelledby="title desc">
+  <title id="title">Как Document Automation Assistant превращает три документа в два проверяемых результата</title>
+  <desc id="desc">PDF со сведениями о заказчике, Word с описанием работ и Excel с перечнем работ и количествами проходят извлечение, нормализацию и проверку источников и пропусков. На выходе — рабочая заявка DOCX и отдельный отчёт проверки DOCX. Пропуски и конфликты не заполняются догадками: результат требует проверки человека.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#6481a5"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #172b46; }
+      .muted { fill: #52677f; }
+      .eyebrow { font-size: 22px; font-weight: 700; letter-spacing: 1.5px; }
+      .card-title { font-size: 29px; font-weight: 700; }
+      .body { font-size: 26px; }
+      .step { font-size: 30px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1460" fill="#f4f7fb"/>
+  <rect x="34" y="40" width="8" height="142" rx="4" fill="#3478c8"/>
+  <text x="66" y="65" class="eyebrow" fill="#3478c8">DOCUMENT AUTOMATION ASSISTANT</text>
+  <text x="66" y="119" font-size="46" font-weight="750">Три документа</text>
+  <text x="66" y="171" font-size="43" font-weight="750">два проверяемых результата</text>
+  <text x="66" y="214" font-size="25" class="muted">Собирает сведения и показывает, что нужно проверить.</text>
+
+  <!-- Input documents -->
+  <rect x="30" y="242" width="940" height="346" rx="24" fill="#ffffff" stroke="#d8e1ed" stroke-width="2"/>
+  <text x="60" y="286" class="eyebrow" fill="#52677f">ТРИ ВХОДНЫХ ДОКУМЕНТА</text>
+  <g>
+    <rect x="54" y="307" width="892" height="78" rx="16" fill="#f7f9fc" stroke="#e1e8f0"/>
+    <rect x="72" y="320" width="116" height="52" rx="12" fill="#e8f0ff"/>
+    <path d="M91 332h14l9 9v20H91z M105 332v10h9" fill="none" stroke="#3478c8" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="129" y="355" font-size="27" font-weight="750" fill="#275f9e">PDF</text>
+    <text x="214" y="341" class="card-title">Сведения о заказчике</text>
+    <text x="214" y="370" font-size="22" class="muted">Например: название и контакты</text>
+
+    <rect x="54" y="397" width="892" height="78" rx="16" fill="#f7f9fc" stroke="#e1e8f0"/>
+    <rect x="72" y="410" width="116" height="52" rx="12" fill="#f9e9ec"/>
+    <path d="M91 422h14l9 9v20H91z M105 422v10h9" fill="none" stroke="#b4475b" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="121" y="445" font-size="24" font-weight="750" fill="#a23c50">WORD</text>
+    <text x="214" y="431" class="card-title">Описание работ</text>
+    <text x="214" y="460" font-size="22" class="muted">Что нужно сделать</text>
+
+    <rect x="54" y="487" width="892" height="78" rx="16" fill="#f7f9fc" stroke="#e1e8f0"/>
+    <rect x="72" y="500" width="116" height="52" rx="12" fill="#e8f4ed"/>
+    <path d="M91 512h14l9 9v20H91z M105 512v10h9 M95 528h14 M95 534h14" fill="none" stroke="#3c8060" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="118" y="535" font-size="24" font-weight="750" fill="#347052">EXCEL</text>
+    <text x="214" y="521" class="card-title">Перечень работ</text>
+    <text x="214" y="550" font-size="22" class="muted">Названия и количества</text>
+  </g>
+
+  <!-- Flow arrow -->
+  <path d="M500 592 V624" fill="none" stroke="#6481a5" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Processing -->
+  <rect x="30" y="638" width="940" height="378" rx="24" fill="#eaf1fa" stroke="#cfdaea" stroke-width="2"/>
+  <text x="60" y="687" class="eyebrow" fill="#3478c8">ЧТО ДЕЛАЕТ ПРИЛОЖЕНИЕ</text>
+  <g>
+    <rect x="55" y="710" width="890" height="77" rx="16" fill="#ffffff"/>
+    <circle cx="96" cy="748" r="22" fill="#e8f0ff"/>
+    <path d="M88 739h12l7 7v14H88z M100 739v8h7 M91 751h11 M91 756h8" fill="none" stroke="#3478c8" stroke-width="2.3" stroke-linejoin="round"/>
+    <text x="137" y="758" class="step">Извлекает данные</text>
+
+    <rect x="55" y="803" width="890" height="77" rx="16" fill="#ffffff"/>
+    <circle cx="96" cy="841" r="22" fill="#e8f0ff"/>
+    <path d="M85 834h22 M88 841h16 M91 848h10" fill="none" stroke="#3478c8" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="137" y="851" class="step">Приводит данные к одному виду и проверяет</text>
+
+    <rect x="55" y="896" width="890" height="77" rx="16" fill="#ffffff"/>
+    <circle cx="96" cy="934" r="22" fill="#e8f0ff"/>
+    <circle cx="94" cy="932" r="9" fill="none" stroke="#3478c8" stroke-width="2.5"/>
+    <path d="m101 939 7 7 M89 932h10 M94 927v10" fill="none" stroke="#3478c8" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="137" y="944" font-size="28" font-weight="600">Сверяет источники и ищет пропуски</text>
+  </g>
+
+  <!-- Split to outputs -->
+  <path d="M500 1020 V1041 H260 M500 1041 H740" fill="none" stroke="#6481a5" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M260 1041 V1064" fill="none" stroke="#6481a5" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M740 1041 V1064" fill="none" stroke="#6481a5" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Outputs -->
+  <g>
+    <rect x="30" y="1077" width="455" height="190" rx="22" fill="#ffffff" stroke="#cddbeb" stroke-width="2"/>
+    <text x="58" y="1114" class="eyebrow" font-size="19" fill="#52677f">РЕЗУЛЬТАТ 1</text>
+    <path d="M63 1140h24l12 12v38H63z M87 1140v13h12 M70 1164h21 M70 1172h21 M70 1180h15" fill="none" stroke="#3478c8" stroke-width="2.7" stroke-linejoin="round"/>
+    <text x="116" y="1164" font-size="28" font-weight="700">Рабочая заявка</text>
+    <rect x="116" y="1180" width="88" height="34" rx="10" fill="#e8f0ff"/>
+    <text x="133" y="1205" font-size="22" font-weight="700" fill="#275f9e">DOCX</text>
+    <text x="58" y="1243" font-size="21" class="muted">Для дальнейшей работы</text>
+
+    <rect x="515" y="1077" width="455" height="190" rx="22" fill="#ffffff" stroke="#cddbeb" stroke-width="2"/>
+    <text x="543" y="1114" class="eyebrow" font-size="19" fill="#52677f">РЕЗУЛЬТАТ 2</text>
+    <path d="M548 1140h24l12 12v38H548z M572 1140v13h12 M555 1164h21 M555 1172h21 M555 1180h15" fill="none" stroke="#3c8060" stroke-width="2.7" stroke-linejoin="round"/>
+    <text x="601" y="1164" font-size="28" font-weight="700">Отчёт проверки</text>
+    <rect x="601" y="1180" width="88" height="34" rx="10" fill="#e8f4ed"/>
+    <text x="618" y="1205" font-size="22" font-weight="700" fill="#347052">DOCX</text>
+    <text x="543" y="1243" font-size="21" class="muted">Значения и их источники</text>
+  </g>
+
+  <!-- Human review principle -->
+  <rect x="30" y="1290" width="940" height="140" rx="22" fill="#fff5e5" stroke="#f0d39e" stroke-width="2"/>
+  <path d="M75 1322 98 1364H52z" fill="none" stroke="#b87517" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M75 1336v13 M75 1356v1" stroke="#b87517" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="120" y="1337" font-size="28" font-weight="750" fill="#80530f">Пропуск или конфликт?</text>
+  <text x="120" y="1374" font-size="25" font-weight="600" fill="#493c25">Значение не выдумывается — результат проверяет человек.</text>
+  <rect x="730" y="1385" width="208" height="30" rx="10" fill="#f7e5c4"/>
+  <text x="747" y="1407" font-size="19" font-weight="700" fill="#80530f">ТРЕБУЕТ ПРОВЕРКИ</text>
+</svg>

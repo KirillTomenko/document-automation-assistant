@@ -10,6 +10,10 @@
 поддерживаемые данные, показывает проблемы и готовит документы для проверки.
 Экономия времени не измерялась; проект демонстрирует работающий процесс автоматизации.
 
+## Как это работает
+
+![Три входных документа проходят извлечение, проверку и подготовку двух DOCX-результатов](docs/images/document-automation-assistant-flow.svg)
+
 ## Демонстрация
 
 [![Смотреть видео: готовая заявка из PDF, DOCX и XLSX](docs/video/document-automation-assistant-cover.jpg)](docs/video/document-automation-assistant-demo.mp4)
