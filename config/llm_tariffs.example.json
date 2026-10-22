@@ -1,0 +1,15 @@
+{
+  "tariffs": [
+    {
+      "provider": "openai",
+      "model": "test-model",
+      "version": "synthetic-example-v1",
+      "currency": "RUB",
+      "source": "Synthetic demonstration tariff; not a current provider quote",
+      "as_of": "2026-10-20",
+      "input_per_million": "10",
+      "output_per_million": "20",
+      "cached_input_per_million": "2"
+    }
+  ]
+}

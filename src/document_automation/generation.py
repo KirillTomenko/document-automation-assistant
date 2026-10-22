@@ -481,7 +481,9 @@ def _report_render(result, audit_snapshot=None):
         table.rows[0].cells, ("Файл", "Назначение", "Статус", "Доказательства")
     ):
         cell.text = value
-    class_names = {c.document_id: c for c in result.classifications}
+    class_names = {}
+    for classification in result.classifications:
+        class_names.setdefault(classification.document_id, []).append(classification)
     document_types = {
         "customer_card": "Карточка заказчика",
         "work_description": "Описание работ",
@@ -489,22 +491,27 @@ def _report_render(result, audit_snapshot=None):
         "unknown": "Назначение не определено",
     }
     for item in result.documents:
-        classification = class_names.get(item.document_id)
+        classifications = class_names.get(item.document_id, [])
         row = table.add_row().cells
         row[0].text = item.filename
         row[1].text = (
-            document_types.get(classification.document_type, "Назначение не определено")
-            if classification
+            "; ".join(
+                document_types.get(c.document_type, "Назначение не определено")
+                for c in classifications
+            )
+            if classifications
             else "Не определено"
         )
         row[2].text = (
             "Подтверждено фрагментами"
-            if classification and classification.evidence
+            if classifications and all(c.evidence for c in classifications)
             else "Не подтверждено"
         )
         row[3].text = (
-            ", ".join(reference(s) for s in classification.evidence)
-            if classification
+            ", ".join(
+                dict.fromkeys(reference(s) for c in classifications for s in c.evidence)
+            )
+            if classifications
             else "Нет"
         )
     _table_layout(table, (4, 4, 5, 4))

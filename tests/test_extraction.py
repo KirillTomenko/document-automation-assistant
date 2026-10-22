@@ -38,6 +38,7 @@ def test_real_files_to_extracted_result(tmp_path, scenario, state):
 
 class Broken:
     name = "test"
+    is_llm = False
     calls = 0
 
     async def extract(self, payload, limits):
@@ -141,7 +142,7 @@ def test_openai_request_contract_without_network(tmp_path):
     assert len(seen) == 1
 
 
-@pytest.mark.parametrize("status,attempts", [(401, 1), (429, 2), (500, 2)])
+@pytest.mark.parametrize("status,attempts", [(401, 1), (429, 1), (500, 1)])
 def test_provider_error_is_sanitized(tmp_path, status, attempts):
     calls = []
 

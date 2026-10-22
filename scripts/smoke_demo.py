@@ -12,7 +12,7 @@ output.mkdir(parents=True, exist_ok=True)
 with httpx.Client(
     base_url=os.environ.get("DAA_API_URL", "http://127.0.0.1:18000"), timeout=120
 ) as client:
-    assert client.get("/health").json()["mode"] == "demo-rules-v1"
+    assert client.get("/health").json()["mode"] in ("demo-rules-v1", "demo-rules-v2")
     for scenario in ("A", "B", "C", "V", "T"):
         files = [
             {

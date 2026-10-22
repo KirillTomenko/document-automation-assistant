@@ -4,7 +4,10 @@ services:
     ports:
       - "127.0.0.1:${DAA_API_PORT:-18000}:8000"
     volumes:
-      - workflow-data:/data
+      # Shared writable parent contains DataLease's lock, including maintenance.
+      - workflow-state:/var/lib/daa
+      # Keep the existing volume and its root layout; no data migration.
+      - workflow-data:/var/lib/daa/data
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
       interval: 10s
@@ -22,3 +25,4 @@ services:
         condition: service_healthy
 volumes:
   workflow-data:
+  workflow-state:

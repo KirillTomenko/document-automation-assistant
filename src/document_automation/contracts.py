@@ -2,7 +2,7 @@
 
 from typing import Annotated, Generic, Literal, TypeVar
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_serializer, model_validator
 
 Text = Annotated[str, Field(min_length=1, pattern=r"\S")]
 Sha256 = Annotated[str, Field(pattern=r"^[0-9a-f]{64}$")]
@@ -27,6 +27,24 @@ class InputDocument(ContractModel):
 class PdfLocation(ContractModel):
     format: Literal["pdf"] = "pdf"
     page: Annotated[int, Field(ge=1)] | None = None
+    line: Annotated[int, Field(ge=1)] | None = None
+    column: Annotated[int, Field(ge=1)] | None = None
+
+    @model_serializer(mode="wrap")
+    def compatible_location(self, handler):
+        data = handler(self)
+        for key in ("line", "column"):
+            if data.get(key) is None:
+                data.pop(key, None)
+        return data
+
+    @model_validator(mode="after")
+    def text_coordinates(self):
+        if self.line is not None and self.page is None:
+            raise ValueError("PDF line requires page")
+        if self.column is not None and self.line is None:
+            raise ValueError("PDF column requires line")
+        return self
 
 
 class DocxLocation(ContractModel):

@@ -2,7 +2,7 @@
 
 from typing import Literal
 
-from pydantic import AwareDatetime, field_validator, model_validator
+from pydantic import AwareDatetime, field_validator, model_serializer, model_validator
 
 from document_automation.contracts import (
     ClassificationResult,
@@ -127,6 +127,15 @@ class ProcessingResult(ContractModel):
     audit: tuple[AuditEvent, ...]
     generated_document: GeneratedDocument | None = None
     generated_report: GeneratedReport | None = None
+    contract_version: Literal["1.0", "2.0"] = "1.0"
+
+    @model_serializer(mode="wrap")
+    def compatible_snapshot(self, handler):
+        # v1 canonical bytes and report fingerprints predate this field.
+        data = handler(self)
+        if self.contract_version == "1.0":
+            data.pop("contract_version", None)
+        return data
 
     @property
     def can_generate(self) -> bool:
@@ -140,8 +149,13 @@ class ProcessingResult(ContractModel):
         if len(documents) != len(self.documents):
             raise ValueError("duplicate document IDs")
         types = {c.document_id: c.document_type for c in self.classifications}
+        v2 = self.contract_version == "2.0"
+        classification_keys = [
+            (c.document_id, c.document_type) if v2 else c.document_id
+            for c in self.classifications
+        ]
         if (
-            len(types) != len(self.classifications)
+            len(set(classification_keys)) != len(self.classifications)
             or not types.keys() <= documents.keys()
         ):
             raise ValueError("invalid classification document references")
@@ -187,7 +201,7 @@ class ProcessingResult(ContractModel):
         if any(e.event == "failed" for e in self.audit):
             raise ValueError("completed result cannot contain a terminal failure")
 
-        contract = demo_contract()
+        contract = demo_contract(self.contract_version)
         issue_keys = {(i.code, i.path) for i in self.issues}
 
         def require_issue(code, path):
@@ -196,13 +210,15 @@ class ProcessingResult(ContractModel):
 
         for kind, fmt in contract["document_types"].items():
             matches = [c for c in self.classifications if c.document_type == kind]
-            if not matches:
+            if not matches and not v2:
                 require_issue("missing_document", "documents")
-            if len(matches) > 1:
+            if len(matches) > 1 and not v2:
                 require_issue("duplicate_document", "documents")
-            if any(documents[c.document_id].format != fmt for c in matches):
+            if not v2 and any(documents[c.document_id].format != fmt for c in matches):
                 raise ValueError("demo document type/format mismatch")
-        if types.keys() != documents.keys() or "unknown" in types.values():
+        if types.keys() != documents.keys() or any(
+            c.document_type == "unknown" for c in self.classifications
+        ):
             require_issue("unknown_document", "documents")
 
         def check_field(path, result, rule):
@@ -218,7 +234,11 @@ class ProcessingResult(ContractModel):
                 # Unverified claimed sources are diagnostics, not trusted references.
                 if candidate.verified:
                     check_source(candidate.source)
-                    if types.get(candidate.source.document_id) not in rule["sources"]:
+                    if not any(
+                        c.document_id == candidate.source.document_id
+                        and c.document_type in rule["sources"]
+                        for c in self.classifications
+                    ):
                         raise ValueError(f"source type not allowed for {path}")
             if result.ambiguity_reason and not path.endswith(".item_code"):
                 raise ValueError("duplicate_item_code applies only to item codes")

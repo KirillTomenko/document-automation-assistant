@@ -7,7 +7,7 @@
 
 Дата: 2026-10-16. Версия: 1.0. Статус: согласовано до реализации.
 Архитектурные решения: [DECISIONS.md](DECISIONS.md).
-Scope: [PROJECT_BRIEF.md](../PROJECT_BRIEF.md); правила: [AGENTS.md](../AGENTS.md).
+Область MVP и ограничения: [README](../README.md).
 
 ## 1. Вход и результат
 

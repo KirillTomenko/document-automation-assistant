@@ -15,6 +15,7 @@ from document_automation.contracts import (
     DocumentType,
     Text,
 )
+from document_automation.metering import automatic_attempts, extract_attempt
 from document_automation.operations import audit_operation
 from document_automation.schemas import AuditEvent, ProcessingResult
 from document_automation.workflows.work_request import WorkItem, demo_contract
@@ -102,6 +103,7 @@ class DemoExtractor:
     """Deterministic extraction for the documented layout, never an LLM simulation."""
 
     name = "demo-rules-v1"
+    is_llm = False
 
     async def extract(self, payload, limits):
         from document_automation.parsing import ParsedDocument
@@ -191,8 +193,17 @@ async def process_paths(
     run_id: str,
     extractor: Extractor | None = None,
     limits: ExtractionLimits | None = None,
+    *,
+    contract_version: str = "1.0",
+    attempt_journal=None,
 ) -> ProcessingResult:
     """Caller supplies only registered local paths; no paths are accepted from model output."""
+    if contract_version == "2.0":
+        from document_automation.extraction_v2 import process_paths_v2
+
+        return await process_paths_v2(paths, run_id, extractor, limits, attempt_journal)
+    if contract_version != "1.0":
+        raise ValueError("Unsupported work_request contract version")
     extractor, limits = extractor or DemoExtractor(), limits or ExtractionLimits()
     if not 1 <= len(paths) <= 10:
         raise ValueError("Upload between 1 and 10 files")
@@ -228,27 +239,33 @@ async def process_paths(
     payload = json.dumps({"documents": payload_docs}, ensure_ascii=False)
     events.append(_event(run_id, "started"))
     try:
+        if getattr(extractor, "contract_version", "1.0") != "1.0":
+            raise ExtractionError("extraction_contract_mismatch")
         if len(payload.encode()) > limits.max_input_bytes:
             raise ExtractionError("extraction_input_limit")
         async with asyncio.timeout(limits.total_seconds):
-            for attempt in range(limits.attempts):
+            attempts = automatic_attempts(extractor, limits)
+            for attempt in range(attempts):
                 try:
                     events.append(_event(run_id, "model_used", model=extractor.name))
-                    async with asyncio.timeout(limits.timeout_seconds):
-                        output = await extractor.extract(payload, limits)
-                    if len(output.encode()) > limits.max_output_bytes:
-                        raise ExtractionError("extraction_output_limit")
-                    extracted = Extraction.model_validate_json(output)
+                    extracted = await extract_attempt(
+                        extractor,
+                        payload,
+                        limits,
+                        Extraction,
+                        attempt_journal,
+                        attempt + 1,
+                    )
                     break
                 except (ValidationError, TimeoutError) as exc:
-                    if attempt + 1 == limits.attempts:
+                    if attempt + 1 == attempts:
                         raise ExtractionError(
                             "extraction_invalid_output"
                             if isinstance(exc, ValidationError)
                             else "extraction_timeout"
                         ) from None
                 except ExtractionError as exc:
-                    if not exc.retryable or attempt + 1 == limits.attempts:
+                    if not exc.retryable or attempt + 1 == attempts:
                         raise
         fragments = {
             (f.document_id, f.fragment_id): f
@@ -311,6 +328,8 @@ async def process_paths(
         )
     except (ExtractionError, TimeoutError) as exc:
         code = exc.code if isinstance(exc, ExtractionError) else "extraction_timeout"
+        if attempt_journal:
+            attempt_journal.reject_last(code)
         events.append(_event(run_id, "failed", error_code=code))
         return ProcessingResult(
             run_id=run_id,

@@ -11,6 +11,9 @@ dist/
 .coverage
 htmlcov/
 data/
+backups/
+data-restored/
+.daa-data-*.lock
 tmp/
 *.py[cod]
 *.log

@@ -109,9 +109,9 @@ class WorkRequestData(ContractModel):
         return "found" if self.items else "missing"
 
 
-def demo_contract() -> dict:
+def demo_contract(version="1.0") -> dict:
     """Fresh JSON-serializable description derived from model field metadata."""
-    return deepcopy(
+    contract = deepcopy(
         {
             "workflow": "work_request",
             "version": "1.0",
@@ -130,3 +130,16 @@ def demo_contract() -> dict:
             },
         }
     )
+    if version == "2.0":
+        contract["version"] = version
+        contract["document_types"] = {
+            kind: ["pdf", "docx", "xlsx"] for kind in contract["document_types"]
+        }
+        for rule_set in (contract["fields"], contract["item_fields"]):
+            for field in rule_set.values():
+                field["sources"] = dict.fromkeys(
+                    contract["document_types"], "Verified labeled field or table cell"
+                )
+    elif version != "1.0":
+        raise ValueError("Unsupported work_request contract version")
+    return contract
