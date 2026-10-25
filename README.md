@@ -142,16 +142,17 @@ UI: http://127.0.0.1:18501, API: http://127.0.0.1:18000/docs.
 git diff --check
 ```
 
-## Действующая демонстрация
+## Демонстрация версии 2.0
 
-[![Смотреть действующую демонстрацию](docs/video/document-automation-assistant-cover-play.png)](https://kirilltomenko.github.io/document-automation-assistant/)
+[![Смотреть демонстрацию Document Automation Assistant 2.0](docs/video/document-automation-assistant-2.0-cover.jpg)](https://kirilltomenko.github.io/document-automation-assistant/)
 
-Существующий ролик (81 секунда) показывает базовый сценарий: прежний смешанный
-комплект, offline, синтетические данные. Возможности версии 2.0 — одинаковые форматы,
-расходы, безопасные повторы, принятие и backup/restore — этот ролик не демонстрирует.
-[Предложение обновления схемы, обложки, Pages и сценария](docs/DEMO_V2_PROPOSAL.md).
+**[Смотреть видео · 76 секунд](https://kirilltomenko.github.io/document-automation-assistant/)** · [MP4 напрямую](docs/video/document-automation-assistant-2.0-demo.mp4)
 
-![Действующая схема прежнего смешанного комплекта](docs/images/document-automation-assistant-flow.svg)
+Реальный Streamlit в **offline demo** на синтетических данных: три DOCX → обработка и источники значений → рабочая заявка и отчёт проверки → конфликт дат и `needs_review`. Никаких внешних LLM-вызовов; видео не подтверждает качество реальной модели на документах клиентов или измеренную экономию времени. Поддерживаются [ограниченные структуры](docs/FORMATS_V2.md), а не любые документы.
+
+[Предыдущая демонстрация · 81 секунда](docs/video/document-automation-assistant-demo.mp4) сохранена по прежнему адресу; она показывает исходный смешанный комплект PDF, DOCX и XLSX. На [странице GitHub Pages](https://kirilltomenko.github.io/document-automation-assistant/) доступны оба ролика.
+
+![Схема исходного смешанного комплекта](docs/images/document-automation-assistant-flow.svg)
 
 | Рабочая заявка V | Отчёт проверки V |
 |---|---|
